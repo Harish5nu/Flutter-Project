@@ -45,7 +45,8 @@ class HomePage extends StatelessWidget{
         child: Text("Harry",
         style: TextStyle(
           fontSize: 50
-        ),),
+        ),
+        ),
       ),
     );
   }
