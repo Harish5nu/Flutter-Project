@@ -34,24 +34,43 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-class HomePage extends StatelessWidget{
+
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("My Title"),
-      ),
+      appBar: AppBar(title: Text("My Title")),
       body: Center(
-        child: Text("Harry",
-        style: TextStyle(
-          fontSize: 50
-        ),
+        child: Padding(
+          padding:  EdgeInsets.all(40.0),
+          child: Column(
+            spacing: 20.5,
+            children: [
+              Text("Login To Continue", style: TextStyle(fontSize: 40)),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: "Email",
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              TextFormField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: "Password",
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              ElevatedButton(onPressed: (){
+                print("Login Sucessfull");
+              }, child: Text("Login"))
+            ],
+          ),
         ),
       ),
     );
   }
-
 }
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
