@@ -1,6 +1,6 @@
 # AWT Project
 
-The **AWT Project** is a Flutter-based mobile application designed to serve as a solid foundation for building modern, cross-platform apps. This project focuses on maintainability, performance, and scalability.
+The **AWT Project** is a Flutter-based mobile application designed  to serve as a solid foundation for building modern, cross-platform apps. This project focuses on maintainability, performance, and scalability.
 
 ## 📁 Project Structure
 
@@ -25,7 +25,7 @@ Follow these steps to run the app locally:
 - Android Studio or Visual Studio Code
 - Emulator or physical device
 
-### ▶️ Installation Steps
+### ▶️ Installation Steps:
 
 1. Clone the repository:
    ```bash
