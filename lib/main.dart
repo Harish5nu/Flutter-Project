@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: HomePage(),
+      home: MyStatefulWidget(),
     );
   }
 }
@@ -42,11 +42,11 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: Text("My Title")),
       body: Center(
         child: Padding(
-          padding:  EdgeInsets.all(40.0),
+          padding: EdgeInsets.all(40.0),
           child: Column(
             spacing: 20.5,
             children: [
-              Text("Login To Continue", style: TextStyle(fontSize: 40)),
+              Text("Registration", style: TextStyle(fontSize: 40)),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "Email",
@@ -60,9 +60,12 @@ class HomePage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
-              ElevatedButton(onPressed: (){
-                print("Login Sucessfull");
-              }, child: Text("Login"))
+              ElevatedButton(
+                onPressed: () {
+                  print("Registration Successful");
+                },
+                child: Text("Register"),
+              ),
             ],
           ),
         ),
@@ -70,7 +73,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -155,5 +157,47 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+}
+
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({super.key});
+
+  @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  int count = 0;
+  @override
+  void initState() {
+    print("Hello");
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print(count.toString());
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          Text(count.toString()),
+          ElevatedButton(onPressed: () {
+
+
+            setState(() {
+              count++;
+            });
+          }, child: Text('Add')),
+        ],
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    print("Hello 3");
+    super.dispose();
   }
 }
