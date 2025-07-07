@@ -29,7 +29,7 @@ Follow these steps to run the app locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Harish5nu/Flutter.git
+   git clone https://github.com/Harish5nu/Flutter-Project.git
    cd awt_project
    ```
 
