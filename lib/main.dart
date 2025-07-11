@@ -1,4 +1,5 @@
-import 'package:awt_project/Features/auth/views/login_page.dart';
+import 'package:awt_project/features/auth/views/login_page.dart';
+import 'package:awt_project/features/auth/views/registration_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,4 +36,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
